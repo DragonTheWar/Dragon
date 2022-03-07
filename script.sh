@@ -100,7 +100,7 @@
 
   function kali {
     clear
-    figlet Kali
+    figlet Kali linux
     echo ""
     echo " 1)Установить пакет "
     echo " 2)Настройка репозиториев "
