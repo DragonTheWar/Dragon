@@ -68,6 +68,8 @@
 
   function Our_ip {
     clear
+    echo ""
+    echo ""
     curl http://api.db-ip.com/v2/free/self/ipAddress
     echo ""
     read -rsn1 -p" Нажмите любую кнопку для продолжения "
@@ -77,6 +79,8 @@
 
   function covid_19 {
     clear
+    figlet Covid-19
+    echo ""
     echo -n " Введите страну(на английском): "
     read country
     curl -L covid19.trackercli.com/$country
@@ -86,6 +90,8 @@
   }
 
   function update {
+    clear
+    figlet Update
     git pull
     read -rsn1 -p" Нажмите любую кнопку для продолжения "
     bash myscript.sh
@@ -93,6 +99,7 @@
 
   function kali {
     clear
+    figlet Kali
     echo ""
     echo " 1)Установить пакет "
     echo " 2)Настройка репозиториев "
@@ -109,6 +116,7 @@
 
   function kali_package {
     clear
+     figlet Package
      echo ""
      echo " Установка пакетов при помощи скрипта "
      echo " Разделение пакетов при помощи && "
@@ -123,6 +131,7 @@
 
   function kali_repository {
     clear
+    figlet Configure
     echo ""
     echo "1) Версия системы "
     echo "2) Проверка файлов репозиториев "
@@ -182,6 +191,8 @@ function termux {
 
 function install_termux {
   clear
+  figlet Install
+  echo ""
   echo "1) Установить nethunter "
   echo "2) Назад "
 
@@ -194,6 +205,8 @@ function install_termux {
 }
 
 function install_nethunter {
+  clear
+  figlet Nethunter
   apt-get update -y
   pkg install wget -y
   pkg install python -y
@@ -204,6 +217,8 @@ function install_nethunter {
 
 function configure_termux {
   clear
+  figlet configure
+  echo ""
   echo "1) Настройка баннера "
   echo "2) Назад"
 
