@@ -86,6 +86,7 @@
 
   function update {
     git pull
+    read -rsn1 -p" Нажмите любую кнопку для продолжения "
     bash myscript.sh
   }
 
@@ -180,25 +181,15 @@ function termux {
 
 function install_termux {
   clear
-  echo "1) Установить Баннер "
-  echo "2) Установить nethunter"
+  echo "1) Установить nethunter "
+  echo "2) Назад "
 
   echo -n "Введите ответ: "
   read option
   case $option in
-    1 ) install_banner ;;
-    2 ) install_nethunter ;;
+    1 ) install_nethunter  ;;
+    2 ) termux ;;
   esac
-}
-
-function install_banner {
-  clear
-  apt update -y
-  apt install figlet -y
-  apt install python2 -y
-  pip2 install lolcat
-  read -rsn1 -p" Нажмите любую кнопку для продолжения "
-  termux
 }
 
 function install_nethunter {
