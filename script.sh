@@ -4,6 +4,7 @@
   function main_menu {
     clear
     figlet Dragon
+    echo ""
     echo " telegram: DarK_TeAm3 "
     echo ""
     echo "Выберите программу для запуска: "
@@ -94,7 +95,7 @@
     figlet Update
     git pull
     read -rsn1 -p" Нажмите любую кнопку для продолжения "
-    bash myscript.sh
+    bash script.sh
   }
 
   function kali {
