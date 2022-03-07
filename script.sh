@@ -4,6 +4,7 @@
   function main_menu {
     clear
     figlet Dragon
+    echo " telegram: DarK_TeAm3 "
     echo ""
     echo "Выберите программу для запуска: "
     echo "1) Узнать информацию ip "
@@ -217,7 +218,7 @@ function configure_termux {
 function banner_configure {
   clear
   figlet banner
-  echo "  "
+  echo " telegram: DarK_TeAm3 "
   echo ""
   read -p "  [~] Баннер:" banner
   read -p "  [~] Пользователь:" user
