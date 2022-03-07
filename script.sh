@@ -195,13 +195,15 @@ function install_termux {
   figlet Install
   echo ""
   echo "1) Установить nethunter "
-  echo "2) Назад "
+  echo "2) Установить sudo"
+  echo "3) Назад "
 
   echo -n "Введите ответ: "
   read option
   case $option in
     1 ) install_nethunter  ;;
-    2 ) termux ;;
+    2 ) install_sudo ;;
+    3 ) termux ;;
   esac
 }
 
@@ -214,6 +216,14 @@ function install_nethunter {
   pkg install python2 -y
   pkg install openssh -y
   pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Kali/kali.sh && bash kali.sh
+}
+
+function install_sudo {
+  apt install git
+  git clone https://gitlab.com/st42/termux-sudo
+  cd termux-sudo
+  cat sudo > /data/data/com.termux/files/usr/bin/sudo
+  chmod 700 /data/data/com.termux/files/usr/bin/sudo
 }
 
 function configure_termux {
