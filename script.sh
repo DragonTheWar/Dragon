@@ -6,6 +6,7 @@
     figlet Dragon
     echo ""
     echo " telegram: DarK_TeAm3 "
+    echo " Github: DragonTheWar "
     echo ""
     echo "Выберите программу для запуска: "
     echo "1) Узнать информацию ip "
