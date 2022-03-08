@@ -27,7 +27,7 @@
     read option
     echo ""
 
-    #опции
+
     case $option in
       1 ) ip ;;
       2 ) covid_19 ;;
@@ -38,7 +38,7 @@
     esac
   }
 
-#Функция вычисления ip адреса
+
   function ip {
     clear
     figlet ip
@@ -53,7 +53,7 @@
     read option
     echo ""
 
-    #Выбор опций для ip
+
     case $option in
       1 ) other_ip ;;
       2 ) Our_ip ;;
@@ -253,6 +253,7 @@ function configure_termux {
   echo ""
   echo "1) Настройка баннера "
   echo "2) Назад"
+  echo ""
 
   echo -n " Введите ответ: "
   read option
