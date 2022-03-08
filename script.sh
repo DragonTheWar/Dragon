@@ -97,7 +97,9 @@
     figlet Update
     echo ""
     git pull
+    echo ""
     echo "По всем вопросам обращаться сюда: "
+    echo ""
     echo "Telegram: DarK_TeAm3 "
     echo "Github: DragonTheWar "
     echo ""
