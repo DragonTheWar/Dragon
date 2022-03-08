@@ -1,6 +1,11 @@
 #!/usr/bin/bash
+# Author by @DarK_TeAm3
+# Support me with telegram channel https://t.me/DarK_TeAm3
+# Disclaimer: please dont re-edit or recode the original source code !
+# Last update: 08/03/2022 - version 1.0
 
-#Главное меню
+
+
   function main_menu {
     clear
     figlet Dragon
