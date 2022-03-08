@@ -6,3 +6,4 @@ apt install figlet -y
 apt install curl -y
 apt install wget -y
 apt install ruby -y
+bash script.sh
