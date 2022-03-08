@@ -102,6 +102,7 @@
     clear
     figlet Update
     echo ""
+    cd ~/dragon/
     git pull
     echo ""
     echo "По всем вопросам обращаться сюда: "
@@ -291,3 +292,4 @@ function banner_configure {
 }
 
 main_menu
+
