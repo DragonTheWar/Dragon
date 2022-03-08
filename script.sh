@@ -95,6 +95,7 @@
   function update {
     clear
     figlet Update
+    echo ""
     git pull
     echo ""
     read -rsn1 -p" Нажмите любую кнопку для продолжения "
