@@ -102,7 +102,6 @@
     clear
     figlet Update
     echo ""
-    cd ~/dragon/
     git pull
     echo ""
     echo "По всем вопросам обращаться сюда: "
@@ -216,16 +215,18 @@ function install_termux {
   figlet Install
   echo ""
   echo "1) Установить nethunter "
-  echo "2) Установить sudo"
-  echo "3) Назад "
+  echo "2) Установить metasploit"
+  echo "3) Установить sudo"
+  echo "4) Назад "
   echo ""
 
   echo -n "Введите ответ: "
   read option
   case $option in
     1 ) install_nethunter  ;;
-    2 ) install_sudo ;;
-    3 ) termux ;;
+    2 ) install_metasploit ;;
+    3 ) install_sudo ;;
+    4 ) termux ;;
   esac
 }
 
@@ -238,6 +239,14 @@ function install_nethunter {
   pkg install python2 -y
   pkg install openssh -y
   pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Kali/kali.sh && bash kali.sh
+}
+
+function install_metasploit {
+
+  wget https://github.com/gushmazuko/metasploit_in_termux/blob/master/metasploit.sh
+  chmod 777 metasploit.sh
+  bash metasploit.sh
+
 }
 
 function install_sudo {
@@ -266,7 +275,8 @@ function configure_termux {
 
 function termux_command {
     cd ~
-    echo 'alias dragon="bash ~/dragon/script.sh"' >> ~/../usr/etc/bash.bashrc
+    wget -q https://raw.githubusercontent.com/DragonTheWar/dragon/main/script.sh -O $PREFIX/bin/dragon
+    chmod 777 $PREFIX/bin/dragon
     echo "Теперь можно запускать команду 'dragon' "
     echo ""
     read -rsn1 -p" Нажмите любую кнопку для продолжения "
@@ -292,4 +302,3 @@ function banner_configure {
 }
 
 main_menu
-
