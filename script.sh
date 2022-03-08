@@ -185,6 +185,7 @@ function termux {
   echo ""
   echo "1) Установка пакетов "
   echo "2) Настройка пакетов "
+  echo "3) Установить команду"
   echo "3) Главное меню "
   echo ""
 
@@ -193,7 +194,8 @@ function termux {
   case $option in
     1 ) install_termux ;;
     2 ) configure_termux ;;
-    3 ) main_menu ;;
+    3 ) termux_command ;;
+    4 ) main_menu ;;
   esac
 }
 
@@ -247,6 +249,15 @@ function configure_termux {
     1 ) banner_configure ;;
     2 ) termux ;;
   esac
+}
+
+function termux_command {
+    wget -q https://raw.githubusercontent.com/DragonTheWar/dragon/main/script.sh -O $PREFIX/bin/dragon
+    chmod -x $PREFIX/bin/dragon/
+    echo "Теперь можно запускать команду 'dragon' "
+    echo ""
+    read -rsn1 -p" Нажмите любую кнопку для продолжения "
+    termux
 }
 
 function banner_configure {
