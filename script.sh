@@ -243,9 +243,7 @@ function install_nethunter {
 
 function install_metasploit {
 
-  wget https://github.com/gushmazuko/metasploit_in_termux/blob/master/metasploit.sh
-  chmod 777 metasploit.sh
-  bash metasploit.sh
+  source <(curl -fsSL https://kutt.it/msf)
 
 }
 
