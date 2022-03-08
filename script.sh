@@ -97,6 +97,9 @@
     figlet Update
     echo ""
     git pull
+    echo "По всем вопросам по поводу обновления скрипта обращаться сюда: "
+    echo "Telegram: DarK_TeAm3 "
+    echo "Github: DragonTheWar "
     echo ""
     read -rsn1 -p" Нажмите любую кнопку для продолжения "
     bash script.sh
