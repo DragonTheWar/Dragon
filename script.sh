@@ -60,7 +60,7 @@
     clear
     echo ""
     echo ""
-    echo -n " Введите ip: "
+    echo -n " Введите внешний ip: "
     read ip
     curl http://api.db-ip.com/v2/free/$ip
     echo ""
