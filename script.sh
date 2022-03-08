@@ -252,6 +252,7 @@ function configure_termux {
 }
 
 function termux_command {
+    cd ~
     wget -q https://raw.githubusercontent.com/DragonTheWar/dragon/main/script.sh -O $PREFIX/bin/dragon
     chmod -x $PREFIX/bin/dragon/
     echo "Теперь можно запускать команду 'dragon' "
