@@ -14,6 +14,7 @@
     echo "4) Kali linux "
     echo "5) Termux "
     echo "6) Выход"
+    echo ""
 
 
     echo -n " Введите ответ: "
@@ -40,6 +41,7 @@
     echo "1) Узнать информацию по другому ip "
     echo "2) Узнать информацию по вашему ip "
     echo "3) Вернуться в главное меню"
+    echo ""
 
     echo -n "Уточните информацию: "
     read option
@@ -94,6 +96,7 @@
     clear
     figlet Update
     git pull
+    echo ""
     read -rsn1 -p" Нажмите любую кнопку для продолжения "
     bash script.sh
   }
@@ -105,6 +108,7 @@
     echo " 1) Установить пакет "
     echo " 2) Настройка репозиториев "
     echo " 3) Выйти в главное меню "
+    echo ""
 
     echo -n " Выберите опцию: "
     read option
@@ -122,6 +126,7 @@
      echo " Установка пакетов при помощи скрипта "
      echo " Разделение пакетов при помощи && "
      echo " Например: Deluge && Zabbix && Gkrellm"
+     echo ""
      echo -n " Введите пакет для установки: "
      read package
      sudo apt install $package
@@ -180,6 +185,7 @@ function termux {
   echo "1) Установка пакетов "
   echo "2) Настройка пакетов "
   echo "3) Главное меню "
+  echo ""
 
   echo -n "Введите ответ: "
   read option
@@ -197,6 +203,7 @@ function install_termux {
   echo "1) Установить nethunter "
   echo "2) Установить sudo"
   echo "3) Назад "
+  echo ""
 
   echo -n "Введите ответ: "
   read option
