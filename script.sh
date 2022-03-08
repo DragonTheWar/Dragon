@@ -265,7 +265,7 @@ function configure_termux {
 
 function termux_command {
     cd ~
-    echo 'alias dragon="bash ~/script.sh"' >> ~/../usr/etc/bash.bashrc
+    echo 'alias dragon="bash ~/dragon/script.sh"' >> ~/../usr/etc/bash.bashrc
     echo "Теперь можно запускать команду 'dragon' "
     echo ""
     read -rsn1 -p" Нажмите любую кнопку для продолжения "
