@@ -16,10 +16,11 @@
     echo "Выберите программу для запуска: "
     echo "1) Узнать информацию ip "
     echo "2) Узнать информацию Сovid-19 "
-    echo "3) Обновить скрипт "
-    echo "4) Kali linux "
-    echo "5) Termux "
-    echo "6) Выход"
+    echo "3) Дополнения"
+    echo "4) Обновить скрипт "
+    echo "5) Kali linux "
+    echo "6) Termux "
+    echo "7) Выход"
     echo ""
 
 
