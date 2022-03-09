@@ -38,7 +38,7 @@
     esac
   }
 
-  function information{
+  function information {
     clear
     figlet Information
     echo ""
