@@ -150,6 +150,7 @@
 
     function find_me {
       cd release/
+      chmod 777 myscript
       ./myscript
       more
     }
