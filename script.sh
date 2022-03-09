@@ -40,7 +40,7 @@
 
   function information {
     clear
-    figlet Information
+    figlet Info
     echo ""
     echo "1) Узнать информацию ip "
     echo "2) Узнать информацию Сovid-19 "
@@ -131,7 +131,9 @@
   }
 
   function more {
-    echo "В разработке"
+    echo ""
+    echo " В разработке"
+    echo ""
     read -rsn1 -p" Нажмите любую кнопку для продолжения "
     main_menu
   }
