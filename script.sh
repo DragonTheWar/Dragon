@@ -133,12 +133,26 @@
   }
 
   function more {
+    clear
+    figlet More
     echo ""
-    echo " В разработке"
+    echo " 1)Угадайка "
+    echo " 2)Главное меню "
     echo ""
-    read -rsn1 -p" Нажмите любую кнопку для продолжения "
-    main_menu
-  }
+
+    echo -n "Уточните информацию: "
+    read option
+    case $option in
+      1 ) find_me ;;
+      2 ) main_menu ;;
+    esac
+    }
+
+    function find_me {
+      cd release/
+      ./myscript
+      more
+    }
 
   function update {
     clear
