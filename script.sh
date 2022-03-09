@@ -14,13 +14,12 @@
     echo " Github: DragonTheWar "
     echo ""
     echo "Выберите программу для запуска: "
-    echo "1) Узнать информацию ip "
-    echo "2) Узнать информацию Сovid-19 "
-    echo "3) Дополнения"
-    echo "4) Обновить скрипт "
-    echo "5) Kali linux "
-    echo "6) Termux "
-    echo "7) Выход"
+    echo "1) Узнать информацию "
+    echo "2) Дополнения "
+    echo "3) Обновить скрипт "
+    echo "4) Kali linux "
+    echo "5) Termux "
+    echo "6) Выход"
     echo ""
 
 
@@ -30,8 +29,8 @@
 
 
     case $option in
-      1 ) ip ;;
-      2 ) covid_19 ;;
+      1 ) information ;;
+      2 ) more ;;
       3 ) update ;;
       4 ) kali ;;
       5 ) termux ;;
@@ -39,6 +38,25 @@
     esac
   }
 
+  function information{
+    clear
+    figlet Information
+    echo ""
+    echo "1) Узнать информацию ip "
+    echo "2) Узнать информацию Сovid-19 "
+    echo "3) Узнать погоду"
+    echo ""
+
+    echo -n " Введите ответ: "
+    read option
+    echo ""
+
+    case $option in
+      1 ) ip ;;
+      2 ) covid_19 ;;
+      3 ) weather ;;
+    esac
+}
 
   function ip {
     clear
@@ -95,6 +113,25 @@
     read country
     curl -L covid19.trackercli.com/$country
     echo ""
+    read -rsn1 -p" Нажмите любую кнопку для продолжения "
+    main_menu
+  }
+
+  function weather {
+    figlet Weather
+    echo ""
+    echo -n "Введите город (на английском): "
+    read city
+    echo -n "Введите страну (на английском): "
+    read country
+    curl wttr.in/$city+$country
+    echo ""
+    read -rsn1 -p" Нажмите любую кнопку для продолжения "
+    main_menu
+  }
+
+  function more {
+    echo "В разработке"
     read -rsn1 -p" Нажмите любую кнопку для продолжения "
     main_menu
   }
