@@ -149,9 +149,8 @@
     }
 
     function find_me {
-      cd release/
-      chmod 777 myscript
-      ./myscript
+      chmod 777 release/myscript
+      ./release/myscript
       echo ""
       echo "1)Попробовать еще раз?"
       echo "2)Назад"
