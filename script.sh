@@ -152,8 +152,17 @@
       cd release/
       chmod 777 myscript
       ./myscript
-      more
-    }
+      echo ""
+      echo "1)Попробовать еще раз?"
+      echo "2)Назад"
+      echo ""
+      echo -n "Выберите опцию: "
+      read option
+      case $option in
+        1 ) find_me ;;
+        2 ) more ;;
+      esac
+}
 
   function update {
     clear
