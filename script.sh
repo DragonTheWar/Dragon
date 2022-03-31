@@ -231,7 +231,7 @@
     case $option in
       1 ) clear && echo "" && uname -a && echo "" && read -rsn1 -p" Нажмите любую кнопку для продолжения " && kali_repository ;;
       2 ) clear && echo "" && sudo cat /etc/apt/sources.list && echo "" && read -rsn1 -p" Нажмите любую кнопку для продолжения " && kali_repository ;;
-      3 ) mitmf
+      3 ) mitmf ;;
       4 ) kali_repository_install ;;
       5 ) keys_kali ;;
       6 ) main_menu ;;
