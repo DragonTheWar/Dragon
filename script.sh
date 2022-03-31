@@ -2,7 +2,7 @@
 # Author by @DarK_TeAm3
 # Support me with telegram channel https://t.me/DarK_TeAm3
 # Disclaimer: please dont re-edit or recode the original source code !
-# Last update: 08/03/2022 - version 1.0
+# Last update: 31/03/2022 - version 1.0
 
 
 
@@ -219,10 +219,11 @@
     echo "1) Версия системы "
     echo "2) Проверка файлов репозиториев "
     echo ""
-    echo "3) Добавить репозиторий Kali "
-    echo "4) Настройка ключей Kali "
+    echo "3) Установка mitmf"
+    echo "4) Добавить репозиторий Kali "
+    echo "5) Настройка ключей Kali "
     echo ""
-    echo "5) Главное меню "
+    echo "6) Главное меню "
     echo ""
 
     echo -n "Выберите опцию: "
@@ -230,15 +231,25 @@
     case $option in
       1 ) clear && echo "" && uname -a && echo "" && read -rsn1 -p" Нажмите любую кнопку для продолжения " && kali_repository ;;
       2 ) clear && echo "" && sudo cat /etc/apt/sources.list && echo "" && read -rsn1 -p" Нажмите любую кнопку для продолжения " && kali_repository ;;
-      3 ) kali_repository_install ;;
-      4 ) keys_kali ;;
-      5 ) main_menu ;;
+      3 ) mitmf
+      4 ) kali_repository_install ;;
+      5 ) keys_kali ;;
+      6 ) main_menu ;;
         esac
+  }
+  
+  function mitmf {
+     
   }
 
   function kali_repository_install {
     clear
     echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" | sudo tee /etc/apt/sources.list
+    echo "deb http://security.kali.org/kali-security kali-rolling/updates main contrib non-free" | sudo tee /etc/apt/sources.list
+    echo "deb http://http.kali.org/kali sana main non-free contrib" | sudo tee /etc/apt/sources.list
+    echo "deb http://security.kali.org/kali-security sana/updates main contrib non-free" | sudo tee /etc/apt/sources.list
+    sudo apt-key adv --keyserver pgp.mit.edu --recv-keys ED444FF07D8D0BF6
+    sudo apt update
     echo ""
     read -rsn1 -p" Нажмите любую кнопку для продолжения "
     kali_repository
