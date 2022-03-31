@@ -239,7 +239,7 @@
   }
   
   function mitmf {
-     
+    sudo apt install mitmf 
   }
 
   function kali_repository_install {
